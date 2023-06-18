@@ -1,0 +1,13 @@
+server.port: 8001
+au.com.ontheboat.api.host: http://marina-api:8080
+spring:
+  cloud:
+    gateway:
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allowedOrigins: "http://marina-ui"
+            allowedMethods:
+              - GET
+              - POST
+              - PUT
