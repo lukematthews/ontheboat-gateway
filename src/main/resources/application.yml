@@ -1,5 +1,6 @@
 server.port: 8001
-au.com.ontheboat.api.host: http://marina-api:8080
+au.com.ontheboat.api.host: http://marina-api:8081
+au.com.ontheboat.keycloak.host: http://marina-api:8080
 spring:
   cloud:
     gateway:

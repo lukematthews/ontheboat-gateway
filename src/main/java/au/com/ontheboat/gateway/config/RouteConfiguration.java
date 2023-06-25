@@ -10,10 +10,14 @@ import org.springframework.context.annotation.Configuration;
 public class RouteConfiguration {
     @Value("${au.com.ontheboat.api.host}")
     private String apiHost;
+    @Value("${au.com.ontheboat.keycloak.host}")
+    private String authHost;
+
     @Bean
     public RouteLocator routes(RouteLocatorBuilder builder) {
         return builder.routes()
                 .route(p -> p.path("/api/**").uri(apiHost))
+                .route(p -> p.path("/auth/**").uri(authHost))
                 .build();
     }
 }
