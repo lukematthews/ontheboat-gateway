@@ -8,9 +8,9 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class RouteConfiguration {
-    @Value("${au.com.ontheboat.api.host}")
+    @Value("${au.com.ontheboat.hosts.api}")
     private String apiHost;
-    @Value("${au.com.ontheboat.keycloak.host}")
+    @Value("${au.com.ontheboat.hosts.keycloak}")
     private String authHost;
 
     @Bean
