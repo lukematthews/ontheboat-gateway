@@ -1,12 +1,11 @@
 server.port: 8001
 au.com.ontheboat.hosts:
   api: http://marina-api:8081
-  keycloak: http://ontheboat-keycloak:8080
 spring:
   cloud:
     gateway.globalcors.cors-configurations:
       '[/**]':
-        allowedOrigins: "http://marina-ui"
+        allowedOrigins: "*"
         allowedMethods:
           - GET
           - POST
